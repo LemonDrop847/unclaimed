@@ -240,3 +240,21 @@ nav{
   background-color: var(--second-color);
   color: var(--para-clr);
 }
+#qc{
+  margin:0 2rem 2rem 1rem;
+  width: 200px;
+  height: 300px;
+  /* overflow: hidden; */
+  /* float: left; */
+  /* float:right; */
+}
+.btn-qr{
+  overflow: hidden;
+  /* margin-top: 10rem; */
+  float : left;
+}
+.loc{
+  padding: 50px;
+  /* margin: 50px; */
+  box-shadow: 2px 5px 8px black;
+}
