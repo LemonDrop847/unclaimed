@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import QRGenerator from "./qrcode";
 import { useParams, useNavigate } from "react-router-dom";
-import {  db } from "./firebase";
+import { db } from "./firebase";
 import {
   doc,
   getDoc,
@@ -49,22 +49,22 @@ const Objects = () => {
       })
       .catch((error) => {
         console.error("Error retrieving object data: ", error);
-        return  navigate("/home");
+        return navigate("/home");
       });
   }, [id, auth.currentUser, navigate]);
- 
+
   const delObject = async (objectId) => {
     try {
       await deleteDoc(doc(db, "objects", id));
       const currentUser = auth.currentUser;
       const userRef = doc(db, "users", currentUser.uid);
       const userSnapshot = await getDoc(userRef);
-      const updatedObjects = userSnapshot.data().objects.filter(
-        (obj) => obj.id !== id
-      );
+      const updatedObjects = userSnapshot
+        .data()
+        .objects.filter((obj) => obj.id !== id);
       await updateDoc(userRef, { objects: updatedObjects });
       console.log(`Successfully deleted object with id ${objectId}`);
-      navigate("/Dashboard")
+      navigate("/Dashboard");
     } catch (error) {
       console.error(error);
     }
@@ -81,13 +81,37 @@ const Objects = () => {
       return;
     }
     navigator.geolocation.getCurrentPosition(
-      (position) => {
+      async (position) => {
         const loc = {
           lat: position.coords.latitude,
           lng: position.coords.longitude,
           timestamp: new Date(),
         };
         if (!isOwner) {
+          let bodyContent = JSON.stringify({
+            item_id: "1",
+            item_name: "1",
+            item_description: "1",
+            item_location: "1",
+          });
+          let headersList = {
+            "content-type": "application/json",
+          };
+          console.log(headersList);
+          console.log(bodyContent);
+
+          let response = await fetch(
+            "http://91f6-49-249-101-106.ngrok.io/addlostitem_sol/",
+            {
+              method: "POST",
+              body: bodyContent,
+              headers: headersList,
+            }
+          );
+
+          let data = await response.text();
+          console.log(data);
+
           console.log(isOwner);
           updateDoc(objectRef, {
             locations: arrayUnion(loc),
@@ -147,10 +171,17 @@ const Objects = () => {
                   <p>Email: {object.email}</p>
                   <p>{object.description}</p>
                   {isLogin && (
-                    <div><button onClick={delObject} className="btn btn-danger" style={{
-                      margin:"1rem"
-                    }}>Delete Object</button>
-                    <QRGenerator objectId={id} objectName={object.name} />
+                    <div>
+                      <button
+                        onClick={delObject}
+                        className="btn btn-danger"
+                        style={{
+                          margin: "1rem",
+                        }}
+                      >
+                        Delete Object
+                      </button>
+                      <QRGenerator objectId={id} objectName={object.name} />
                     </div>
                   )}
                 </div>
