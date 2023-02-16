@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 .App {
   text-align: center;
 }
@@ -35,4 +36,63 @@
   to {
     transform: rotate(360deg);
   }
+}
+.dark-theme{
+  --main-heading:#5f99be;
+  --para-clr:#fff;
+  --btn-bg-color:#5f99be;
+  --second-color:#3C3E40;
+  --btn-text-clr:#fff;
+  --bg-clr:#303030;
+}
+
+.light-theme{
+  --main-heading:#5f99be;
+  --para-clr:#333;
+  --btn-bg-color:#111b20;
+  --second-color:#EAF3FA;
+  --btn-text-clr:#fff;
+  --bg-clr:#fff;
+}
+.navs{
+  font-size: 24px;
+  padding: 50px 0 0px;
+  min-height: 160px;
+  /* height: 160px;  */
+}
+.logo{
+  float:left;
+  position: absolute;
+  width: 176px;
+  height: 120px;
+  left: 130px;
+  top: 15px;
+}
+
+#Dark{
+  float: center;
+  width: 45px;
+  height: 45px;
+}
+.links{
+  text-decoration: none;
+  color: var(--para-clr);
+}
+.text11{
+  font-size: 18px;
+  float: left;
+  color: var(--para-clr);
+  background-color: var(--bg-clr);
+}
+#pp{
+  border-radius: 150px;
+  width: 40px;
+  height: 40px;
+  margin:0 0px 0 10px;
+  float: right;
+}
+.dd{
+  text-decoration: none;
+  color: black;
+  /* color: var(--para-clr); */
 }
