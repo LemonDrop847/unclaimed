@@ -96,3 +96,8 @@
   color: black;
   /* color: var(--para-clr); */
 }
+nav{
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg-clr);
+  color:var(--para-clr);
+}
