@@ -3,6 +3,7 @@ import Popup from "./popUp";
 import SignUp from "./auth/signUp";
 import SignIn from "./auth/signIn";
 import { getAuth } from "firebase/auth";
+import AddObject from "./addObject";
 const Home = () => {
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -92,19 +93,21 @@ const Home = () => {
                 scanning the QR code. Also the user can check where the QR was
                 last scanned.
               </p>
-              <button
-                id="sign"
-                className="btn-land"
-                onClick={() => setButtonPopup(true)}
-              >
-                Sign Up
-              </button>
-              {!isLogin && (
+              {isLogin && 
+                <button
+                    id="sign"
+                    className="btn-land"
+                    onClick={() => setButtonPopup(true)}
+                >
+                    Add Object
+                </button>
+              }
+              {isLogin && (
                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                  <SignUp />
+                  <AddObject/>
                 </Popup>
               )}
-              <button
+              {/* <button
                 id="llog"
                 className="btn-land"
                 onClick={() => setButtonPopup1(true)}
@@ -115,7 +118,7 @@ const Home = () => {
                 <Popup trigger={buttonPopup1} setTrigger={setButtonPopup1}>
                   <SignIn />
                 </Popup>
-              )}
+              )} */}
             </div>
           </div>
         </div>
