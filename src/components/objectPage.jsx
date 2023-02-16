@@ -119,7 +119,7 @@ const Objects = () => {
         <div className="container-fluid">
           <div className="row ob-detail">
             <div className="col-6">
-              <h1>Object</h1>
+              {/* <h1>Object</h1> */}
               <div className="row">
                 <div className="col-lg-4 col-sm-2">
                   {object.image ? (
