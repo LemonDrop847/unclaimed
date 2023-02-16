@@ -2,7 +2,16 @@
 .App {
   text-align: center;
 }
+.dropdown-toggle::after {
+  display: none !important;
+}
 
+#dropdown-basic {
+  position: absolute !important;
+  top: 0px !important; /* or any desired value */
+  left: 0 !important; 
+  border: 0;/* or any desired value */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -97,7 +106,7 @@
   /* color: var(--para-clr); */
 }
 nav{
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;  
   background-color: var(--bg-clr);
   color:var(--para-clr);
 }
