@@ -166,3 +166,17 @@ nav{
   max-height: 200px;
   float: left;
 }
+.footer{
+  bottom: 0;
+  /* position: fixed; */
+  left: 0;
+  /* padding: 0px; */
+  width: 100%;
+  background-color: #333333;
+  overflow: hidden;
+}
+.foots{
+  padding: 5px 0 5px 15px;
+  float: left;
+  color: #fff;
+}
