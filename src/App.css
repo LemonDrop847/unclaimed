@@ -183,3 +183,44 @@ nav{
 #obj-add{
   margin: 10vh;
 }
+.type1{
+  box-shadow: 2px 4px 8px rgba(11, 11, 11, 0.616);
+}
+#text{
+  font-family: 'DM Sans', sans-serif;
+  max-width: 780px;
+  padding: 40px 50px 0 100px;
+  text-align: left;
+}
+#text2{
+  font-family: 'DM Sans', sans-serif;
+  max-width: 780px;
+  padding: 40px 100px 0 50px;
+  text-align: left;
+  float: right;
+}
+#llog{
+  border: solid #4F69EE 2px;
+  color: #4F69EE;
+  background-color: var(--bg-clr);
+}
+#laptop{
+  margin: 30px 20px 50px 30px;
+  padding-bottom: 10px;
+  float: center;
+  width: 288px;
+  height: 288px;
+  border-radius: 150px;
+}
+#hand{
+  margin: 30px 20px 50px 30px;
+  padding-bottom: 10px;
+  float: center;
+  width: 288px;
+  height: 288px;
+  border-radius: 150px;
+}
+#half{
+  background-color: var(--second-color);
+  color: var(--para-clr);
+}
