@@ -62,7 +62,7 @@ const GoogleMaps = ({ locations }) => {
       });
 
     setMarkers(newMarkers);
-  }, [map, selectedLocationIndex, locations, markers]);
+  }, [map, selectedLocationIndex, locations]);
 
   const handleButtonClick = (index) => {
     setSelectedLocationIndex(index);
