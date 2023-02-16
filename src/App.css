@@ -63,6 +63,12 @@
   --btn-text-clr:#fff;
   --bg-clr:#fff;
 }
+#dd-menu{
+  font-size: 18px;
+  width: 250px;
+  background-color: var(--second-color);
+  color: var(--para-clr);
+}
 .navs{
   font-size: 24px;
   padding: 50px 0 0px;
@@ -102,7 +108,12 @@
 }
 .dd{
   text-decoration: none;
-  color: black;
+  color: var(--para-clr );
+  /* color: var(--para-clr); */
+}
+.d1{
+  /* text-decoration: none; */
+  color: var(--para-clr );
   /* color: var(--para-clr); */
 }
 nav{
