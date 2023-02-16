@@ -1,4 +1,4 @@
-import "./PopUp.css";
+import "./popUp.css";
 const Popup = (props) => {
     return (props.trigger)? ( 
         <div className="popup">
