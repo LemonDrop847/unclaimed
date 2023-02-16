@@ -133,7 +133,7 @@ const Navbar = () => {
                         {user && <img src={user.photoURL} id="pp" alt="" />}
                         <div className="text11">Hello, {userName}</div>
                       </Dropdown.Toggle>
-                      <Dropdown.Menu>
+                      <Dropdown.Menu id="dd-menu">
                         {/* <Dropdown.Item href="#/action-1"> */}
                         {/* </Dropdown.Item> */}
                         {/* <Link className="links" to="">Dashboard</Link> */}
@@ -142,11 +142,17 @@ const Navbar = () => {
                             Dashboard
                           </Link>
                         </Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">
+                        <Dropdown.Item  href="#/action-2">
+                        <div className="d1">
+
                           Update Profile
+                        </div>
                         </Dropdown.Item>
-                        <Dropdown.Item href="#/action-1" onClick={userSignOut}>
-                          Sign Out
+                        <Dropdown.Item  href="#/action-1" onClick={userSignOut}>
+                          <div className="d1">
+                            Sign Out
+
+                          </div>
                         </Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
