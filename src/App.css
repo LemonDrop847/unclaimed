@@ -192,6 +192,11 @@ nav{
   padding: 40px 50px 0 100px;
   text-align: left;
 }
+.text1{
+  /* float: left; */
+  color: var(--para-clr);
+  background-color: var(--bg-clr);
+}
 #text2{
   font-family: 'DM Sans', sans-serif;
   max-width: 780px;
