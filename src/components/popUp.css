@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+.dark-theme{
+--main-heading:#5f99be;
+--para-clr:#fff;
+--btn-bg-color:#5f99be;
+--second-color:#3C3E40;
+--btn-text-clr:#fff;
+--bg-clr:#303030;
+}
+
+.light-theme{
+--main-heading:#5f99be;
+--para-clr:#333;
+--btn-bg-color:#111b20;
+--second-color:#E3EEF6;
+--btn-text-clr:#fff;
+--bg-clr:#fff;
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.493);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-inner{
+    
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 700px;
+    /* border-radius: 16px; */
+    color: var(--para-clr);
+    background-color: var(--second-color);
+}
+.popup-inner .close-btn{
+    border: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.sign-in-container {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.sign-in-container h1{
+    text-align: center;
+    /* font-size: 25px; */
+    color:var(--para-clr);
+    margin-bottom: 30px;
+}
+.sign-in-container button{
+    /* background-color: #ca6d6dc8; */
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    width: 220px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button{
+    /* box-shadow: 2px 2px rgb(151, 149, 149); */
+    background-color: var(--second-color); 
+}
+label{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--para-clr);
+    display: block;
+    float: left;
+}
+textarea{
+    height: 200px;
+}
+input,textarea{
+    border-radius: 6px;
+    width: 100%;
+    padding: 6px 10px;
+    /* margin-bottom: 5px; */
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
