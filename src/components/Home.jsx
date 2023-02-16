@@ -1,3 +1,4 @@
+
 import { useState, useEffect} from "react";
 import Popup from "./popUp";
 import SignUp from "./auth/signUp";
@@ -25,10 +26,10 @@ const Home = () => {
         <div className="row text1">
             <div className="col ">
                 <div id="text">
-                <h1>Some Heading Text</h1>
+                <h1><strong>Reclaim your lost items</strong></h1>
                 <p style={{
                     fontSize:"20px"
-                }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, perspiciatis accusantium dolorum, quidem mollitia maxime, quia repellendus ad corrupti nisi distinctio ducimus vitae dolore! Rem voluptas quos laborum laboriosam debitis natus impedit iure, exercitationem deserunt velit iste neque quaerat doloribus voluptatem odit? Ab eveniet dolores cumque provident eaque perferendis ea.</p>
+                }}>This busy pace of modern life often makes things hectic for people. There are chances you might lose one or more of your valuable belongings on your way or at a particular place you visit. Unclaimed aims to help users to reach their mislaid items easily.</p>
                 {!isLogin &&
                 <div>
                     <button id="sign" className="btn-land" onClick={()=>setButtonPopup(true)}>Sign Up</button>
@@ -54,10 +55,12 @@ const Home = () => {
                 </div>
                 <div className="col" >
                 <div id="text2">
-                <h1>Some Heading Text</h1>
+                <h1><strong>Scan QR to reach the owner </strong></h1>
                 <p style={{
                     fontSize:"20px"
-                }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, perspiciatis accusantium dolorum, quidem mollitia maxime, quia repellendus ad corrupti nisi distinctio ducimus vitae dolore! Rem voluptas quos laborum laboriosam debitis natus impedit iure, exercitationem deserunt velit iste neque quaerat doloribus voluptatem odit? Ab eveniet dolores cumque provident eaque perferendis ea.</p>
+                }}>By allowing users to generate QR codes for their personal items, Unclaimed aims to make it easy for someone who finds a lost item to quickly and easily return it to its rightful owner by scanning the QR code. Also the user can check where the QR was last scanned.
+
+                </p>
                 <button id="sign" className="btn-land" onClick={()=>setButtonPopup(true)}>Sign Up</button>
                 {!isLogin &&
                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
