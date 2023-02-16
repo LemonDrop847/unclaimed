@@ -110,3 +110,59 @@ nav{
   background-color: var(--bg-clr);
   color:var(--para-clr);
 }
+.btn-land{
+  border-radius: 8px;
+  margin: 5px;
+  margin-bottom: 10px;
+  width: 180px;
+  height: 40px;
+}
+.btn-land:hover{
+  background-color: #2a4aec;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.616);
+}
+#sign{
+  background-color: #4F69EE;
+  border: #4F69EE;
+  color: #fff;
+}
+.dashb{
+  font-family: 'DM Sans';
+  min-height: 500px;
+  text-align: left;
+  /* font-weight: 700; */
+  padding: 4vh 14vh 2vh 12vh ;
+  background-color: var(--bg-clr);
+  color: var(--para-clr);
+}
+.dashb{
+  font-size: 20px;
+} 
+.object-preview{
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  padding: 2px;
+  max-width: 250px;
+  max-height: 200px;
+  /* width: 250px; */
+  box-shadow: 2px 4px 8px rgba(11, 11, 11, 0.616);
+  background-color: var(--second-color  );
+  margin: 2rem 2rem 2rem 0;
+  text-align: center;
+}
+.object-preview:hover{
+  box-shadow: 0px 4px 8px rgb(11, 11, 11);
+}
+.ob-detail{
+  text-align: left;
+  padding-top: 1.5rem;
+  padding-left:6rem ;
+  background-color: var(--bg-clr);
+  color: var(--para-clr);
+  min-height: 475px;
+}
+#obj-img{
+  max-width: 200px;
+  max-height: 200px;
+  float: left;
+}
