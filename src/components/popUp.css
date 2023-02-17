@@ -33,7 +33,7 @@
     padding: 32px;
     width: 100%;
     max-width: 700px;
-    /* border-radius: 16px; */
+    border-radius: 8px;
     color: var(--para-clr);
     background-color: var(--second-color);
 }
