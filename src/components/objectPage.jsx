@@ -89,10 +89,10 @@ const Objects = () => {
         };
         if (!isOwner) {
           let bodyContent = JSON.stringify({
-            item_id: "1",
-            item_name: "1",
-            item_description: "1",
-            item_location: "1",
+            "item_id": "1",
+            "item_name": "1",
+            "item_description": "1",
+            "item_location": "1",
           });
           let headersList = {
             "content-type": "application/json",
@@ -101,9 +101,10 @@ const Objects = () => {
           console.log(bodyContent);
 
           let response = await fetch(
-            "http://91f6-49-249-101-106.ngrok.io/addlostitem_sol/",
+            "https://52a0-49-249-101-106.ngrok.io/addlostitem_sol/",
             {
               method: "POST",
+              mode: "no-cors",
               body: bodyContent,
               headers: headersList,
             }
