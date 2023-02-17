@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const QRGenerator = ({objectId,objectName}) => {
   
-  const siteUrl="sit-test-app.vercel.app"
+  const siteUrl="unclaimed.vercel.app"
   const [imageUrl, setImageUrl] = useState(null);
   const data=siteUrl+"/objects/"+objectId;
 
