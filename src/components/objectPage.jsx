@@ -105,7 +105,7 @@ const Objects = () => {
             body: `Your Item ${object.name} was scanned`,
           });
           let response = await fetch(
-            "https://0cb4-1-39-16-19.ngrok.io/addlostitem_sol/",
+            "https://443a-49-249-101-106.ngrok.io/addlostitem_sol/",
             {
               method: "POST",
               //  mode: "no-cors",
@@ -114,7 +114,7 @@ const Objects = () => {
             }
           );
           let response2 = await fetch(
-            "https://0cb4-1-39-16-19.ngrok.io/send_email/",
+            "https://443a-49-249-101-106.ngrok.io/send_email/",
             {
               method: "POST",
               //  mode: "no-cors",
