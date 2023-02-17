@@ -88,30 +88,34 @@ const Objects = () => {
           timestamp: new Date(),
         };
         if (!isOwner) {
-          // let bodyContent = JSON.stringify({
-          //   "item_id": "1",
-          //   "item_name": "1",
-          //   "item_description": "1",
-          //   "item_location": "1",
-          // });
-          // let headersList = {
-          //   "content-type": "application/json",
-          // };
-          // console.log(headersList);
-          // console.log(bodyContent);
+          let headersList = {
+            Accept: "*/*",
+            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+            "Content-Type": "application/json",
+          };
 
-          // let response = await fetch(
-          //   "https://52a0-49-249-101-106.ngrok.io/addlostitem_sol/",
-          //   {
-          //     method: "POST",
-          //     mode: "no-cors",
-          //     body: bodyContent,
-          //     headers: headersList,
-          //   }
-          // );
+          let bodyContent = JSON.stringify({
+            item_id: id,
+            item_name: object.name,
+            item_description: object.description,
+            item_location: "19.325,20.565",
+          });
+          let emailcontent = JSON.stringify({
+            to_no: "918280320197",
+            body: "Example message body",
+          });
+          let response = await fetch(
+            "https://0cb4-1-39-16-19.ngrok.io/addlostitem_sol/",
+            {
+              method: "POST",
+              //  mode: "no-cors",
+              body: bodyContent,
+              headers: headersList,
+            }
+          );
 
-          // let data = await response.text();
-          // console.log(data);
+          let data = await response.text();
+          console.log(data);
 
           console.log(isOwner);
           updateDoc(objectRef, {
