@@ -100,9 +100,9 @@ const Objects = () => {
             item_description: object.description,
             item_location: "19.325,20.565",
           });
-          let emailcontent = JSON.stringify({
+          let emailContent = JSON.stringify({
             to_no: "918280320197",
-            body: "Example message body",
+            body: `Your Item ${object.name} was scanned`,
           });
           let response = await fetch(
             "https://0cb4-1-39-16-19.ngrok.io/addlostitem_sol/",
@@ -113,9 +113,18 @@ const Objects = () => {
               headers: headersList,
             }
           );
-
+          let response2 = await fetch(
+            "https://0cb4-1-39-16-19.ngrok.io/send_email/",
+            {
+              method: "POST",
+              //  mode: "no-cors",
+              body: emailContent,
+              headers: headersList,
+            }
+          );
           let data = await response.text();
-          console.log(data);
+          let data2 = await response2.text();
+          console.log(data,data2);
 
           console.log(isOwner);
           updateDoc(objectRef, {
