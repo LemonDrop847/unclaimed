@@ -88,8 +88,7 @@ const Objects = () => {
           timestamp: new Date(),
         };
         if (!isOwner) {
-          let headersList = {
-            Accept: "*/*",
+          /*let headersList = {
             "User-Agent": "Thunder Client (https://www.thunderclient.com)",
             "Content-Type": "application/json",
           };
@@ -125,7 +124,7 @@ const Objects = () => {
           let data = await response.text();
           let data2 = await response2.text();
           console.log(data,data2);
-
+          */
           console.log(isOwner);
           updateDoc(objectRef, {
             locations: arrayUnion(loc),
