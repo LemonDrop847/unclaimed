@@ -6,7 +6,8 @@ const GoogleMaps = ({ locations }) => {
   const [markers, setMarkers] = useState([]);
 
   useEffect(() => {
-    const API_KEY = "AIzaSyDeuRXgxN_xmpt9FaGZr9dzragrOelXbV0";
+    //const API_KEY = "AIzaSyDeuRXgxN_xmpt9FaGZr9dzragrOelXbV0";
+    const API_KEY = "AIzaSyC4zCObt1EySobM1OBBiYwPzrZjohCKEW0";
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
     script.defer = true;
