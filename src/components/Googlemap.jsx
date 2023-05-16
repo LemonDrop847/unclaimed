@@ -16,7 +16,7 @@ const GoogleMaps = ({ locations }) => {
 
     window.initMap = () => {
       const map = new window.google.maps.Map(document.getElementById("map"), {
-        center: { lat: 0, lng: 0 },
+        center: { lat: 20.27638, lng: 85.7761111 },
         zoom: 8,
       });
       setMap(map);
